@@ -1,0 +1,12 @@
+Package: mrc
+Title: Multiple Regression (sub) Components
+Version: 0.0.0.9000
+Authors@R: 
+    person("Will", "Decker", , "deckerwill7@gmail.com", role = c("aut", "cre"))
+Description: Multiple regression is made up of many subcomponents of calculations which can be useful for additional inferences. Here, we calculate such subcomponents with simple functions. 
+License: `use_mit_license()`
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.1
+Imports:
+	MASS (>= 7.3)
