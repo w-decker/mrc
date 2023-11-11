@@ -10,7 +10,7 @@
 deltaR2 <- function (fullm, restrim, data) {
 
   # standardize data
-  data <- scale(data)
+  data <- data.frame(scale(data, center = TRUE))
 
   # get some values
   N <- nrow(data)
