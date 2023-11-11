@@ -5,6 +5,10 @@
 #' @param data data frame of data
 #' @return Returns a numeric vector of F test
 #'
+#' @examples
+#' d <- mrc::simdat(n = 100, r = 0.4)
+#' deltaR2(fullm = y ~ x1 + x2, restrim = y ~ x2, data = d)
+#'
 #' @export
 
 deltaR2 <- function (fullm, restrim, data) {

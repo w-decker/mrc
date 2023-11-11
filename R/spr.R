@@ -5,6 +5,10 @@
 #' @param ivn Independent variable of NO interest
 #' @return Semi-partial correlation value
 #'
+#' @examples
+#' d <- mrc::simdata(n = 100, r = 0.4)
+#' spr(dep = d$y, ivi = d$x1, ivn = d$x2)
+#'
 #' @export
 
 spr <- function(dep, ivi, ivn){
@@ -19,6 +23,9 @@ spr <- function(dep, ivi, ivn){
 #' @param f Formula for entire model in which label[1] is your independent variable of interest.
 #' @param data Data.frame of data
 #' @return Semi-partial correlation value
+#' @examples
+#' d <- mrc::simdat(n = 100, r = 0.4)
+#' sprf(y ~ x1 + x2, data = d)
 #'
 #' @export
 

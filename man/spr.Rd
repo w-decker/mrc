@@ -19,3 +19,8 @@ Semi-partial correlation value
 \description{
 Calculate semi-partial correlations from data
 }
+\examples{
+d <- mrc::simdata(n = 100, r = 0.4)
+spr(dep = d$y, ivi = d$x1, ivn = d$x2)
+
+}

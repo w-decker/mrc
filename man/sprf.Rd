@@ -17,3 +17,8 @@ Semi-partial correlation value
 \description{
 Calculate semi-partial correlations from data by specifying a formula.
 }
+\examples{
+d <- mrc::simdat(n = 100, r = 0.4)
+sprf(y ~ x1 + x2, data = d)
+
+}

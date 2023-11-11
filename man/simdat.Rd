@@ -17,3 +17,7 @@ Returns data.frame with 'y' dependent variable and 'x1' and 'x2' as independent 
 \description{
 Simulate correlated data
 }
+\examples{
+simdat(n = 100, r = 0.4)
+
+}

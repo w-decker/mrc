@@ -4,6 +4,9 @@
 #' @param r Rho. Correlation value to be input into 2x2 positive-definite correlation matrix
 #' @return Returns data.frame with 'y' dependent variable and 'x1' and 'x2' as independent variables
 #'
+#' @examples
+#' simdat(n = 100, r = 0.4)
+#'
 #' @export
 
 simdat <- function (n, r){
