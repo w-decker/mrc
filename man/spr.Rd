@@ -4,14 +4,14 @@
 \alias{spr}
 \title{Calculate semi-partial correlations from data}
 \usage{
-spr(f, vint, data)
+spr(dep, ivi, ivn)
 }
 \arguments{
-\item{f}{Formula for full model}
+\item{dep}{Dependent variable}
 
-\item{vint}{Independent variable of interest}
+\item{ivi}{Independent variable of interest}
 
-\item{data}{Data frame correlation matrix}
+\item{ivn}{Independent variable of NO interest}
 }
 \value{
 Semi-partial correlation value

@@ -3,3 +3,4 @@
 export(deltaR2)
 export(simdat)
 export(spr)
+export(sprf)
