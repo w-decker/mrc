@@ -51,8 +51,8 @@ sprf <- function(f, data){
 #'
 #' @examples
 #' cm <- matrix(data=c(1, 0.2, 0.3, 0.2, 1, -0.6, 0.3, -0.6, 1), nrow=3, ncol=3)
-#' colnames(t1) <- c("y", "x1", "x2")
-#' rownames(t1) <- c("y", "x1", "x2")
+#' colnames(cm) <- c("y", "x1", "x2")
+#' rownames(cm) <- c("y", "x1", "x2")
 #' covspr(y ~ x1, data = cm)
 #'
 #' @export
