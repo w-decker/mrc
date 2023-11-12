@@ -40,3 +40,37 @@ sprf <- function(f, data){
 
   return(c("Semi-partial correlation" = x))
 }
+
+#' Calculate semi-partial correlations from a 3x3 correlation matrix
+#'
+#' @param f Formula. Two variables to compute semi-partial correlation. LHS MUST be dep. variable.
+#' RHS must be ind. variable of interest
+#' @param data Correlation matrix
+#'
+#' @return Semi-partial correlation value
+#'
+#' @examples
+#' cm <- matrix(data=c(1, 0.2, 0.3, 0.2, 1, -0.6, 0.3, -0.6, 1), nrow=3, ncol=3)
+#' colnames(t1) <- c("y", "x1", "x2")
+#' rownames(t1) <- c("y", "x1", "x2")
+#' covspr(y ~ x1, data = cm)
+#'
+#' @export
+
+covspr <- function(f, data){
+
+  y <- as.character(formula.tools::lhs(f))
+  x <- as.character(labels(terms(f)))[1]
+  n <- colnames(data)
+  vars <- c(y, x)
+  ni <- setdiff(n, vars)
+
+
+  numerator <- (data[y, x] - (data[y, ni] * data[x, ni]))
+  denom <- sqrt((1 - data[x, ni])^2)
+  s <- numerator/denom
+
+  return(c("Semi-partial correlation" = s))
+}
+
+
