@@ -70,6 +70,7 @@ covspr <- function(f, data){
   denom <- sqrt(1 - data[x, ni]^2)
   s <- numerator/denom
 
+
   return(c("Semi-partial correlation" = s))
 }
 
