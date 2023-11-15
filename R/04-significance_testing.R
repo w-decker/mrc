@@ -92,7 +92,7 @@ fmr <- function(f, data){
   K <- length(labels(terms(f)))
   df <- N - K - 1
   r2 <- summary(lm(f, data = data))$r.squared
-  ms <- unname(mms(f = f, data = data))
+  ms <- unname(mrc::mms(f = f, data = data))
 
   f <- r2/ms
 

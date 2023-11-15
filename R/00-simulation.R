@@ -38,7 +38,7 @@ simdat <- function (n, r){
 #' @examples
 #' simcovmat(n = 100, r = 0.4)
 #'
-#' @export'
+#' @export
 
 simcovmat <- function(n, r){
   return(cor(mrc::simdat(n = n, r = r)))
