@@ -20,11 +20,26 @@ simdat <- function (n, r){
 
   # Create dependent variable
   B <- c(0, 1, 2)
-  y <- B[1] + B[2]*d[, 1] + B[3]*d[, 2] + rnorm(100, sd=2)
+  y <- B[1] + B[2]*d[, 1] + B[3]*d[, 2] + rnorm(n, sd=2)
 
   # Combine
   df <- as.data.frame(cbind(y, d))
   colnames(df) <- c("y", "x1", "x2")
 
   return(df)
+}
+
+#' Simulate covariance matrix
+#'
+#' @param n Number of data points for raw data
+#' @param r Rho. Correlation value to be input into 2x2 positive-definite correlation matrix.
+#' @return Covariance matrix
+#'
+#' @examples
+#' simcovmat(n = 100, r = 0.4)
+#'
+#' @export'
+
+simcovmat <- function(n, r){
+  return(cor(mrc::simdat(n = n, r = r)))
 }
