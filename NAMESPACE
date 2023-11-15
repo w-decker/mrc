@@ -2,6 +2,9 @@
 
 export(covspr)
 export(deltaR2)
+export(fmr)
+export(fwrite)
+export(mms)
 export(se)
 export(simdat)
 export(spr)
